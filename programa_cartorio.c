@@ -1,22 +1,22 @@
-#include <stdio.h> //biblioteca de comunicaÁ„o com o usu·rio
-#include <stdlib.h> //biblioteca de alocaÁ„o de espaÁo em memÛria
-#include <locale.h> //biblioteca de alocaÁıes de texto por regiıes
-#include <string.h> //biblioteca respons·vel por cuidar das string
+#include <stdio.h> //biblioteca de comunica√ß√£o com o usu√°rio
+#include <stdlib.h> //biblioteca de aloca√ß√£o de espa√ßo em mem√≥ria
+#include <locale.h> //biblioteca de aloca√ß√µes de texto por regi√µes
+#include <string.h> //biblioteca respons√°vel por cuidar das string
 
-int registro() // funÁ„o respons·vel por cadastrar os usu·rios no sistema
+int registro() // fun√ß√£o respons√°vel por cadastrar os usu√°rios no sistema
 {
-	// inÌcio da criaÁ„o de vari·veis/string
+	// in√≠cio da cria√ß√£o de vari√°veis/string
 	char arquivo[40];
 	char cpf[40];
 	char nome[40];
 	char sobrenome[40];
 	char cargo[40];
-	// final da criaÁ„o de vari·veis/string
+	// final da cria√ß√£o de vari√°veis/string
 	
-	printf("Digite o CPF a ser cadastrado: "); //coletando informaÁ„o do usu·rio
+	printf("Digite o CPF a ser cadastrado: "); //coletando informa√ß√£o do usu√°rio
 	scanf("%s", cpf); //%s refere-se a string
 
-	strcpy(arquivo, cpf); //respons·vel por copiar os valores das strng
+	strcpy(arquivo, cpf); //respons√°vel por copiar os valores das strng
 	
 	FILE *file; //cria o arquivo
 	file = fopen(arquivo, "w"); //cria o arquivo e o "w" significa escrever
@@ -24,39 +24,39 @@ int registro() // funÁ„o respons·vel por cadastrar os usu·rios no sistema
 	fclose(file); //fecha o arquivo
 	
 	file = fopen(arquivo, "a"); //cria o arquivo e o "a" significa escrever
-	fprintf(file,","); // salva o valor da vari·vel
+	fprintf(file,","); // salva o valor da vari√°vel
 	fclose(file); //fecha o arquivo
 	
-	printf("Digite o nome a ser cadastrado: "); //coletando informÁ„o do usu·rio
+	printf("Digite o nome a ser cadastrado: "); //coletando inform√ß√£o do usu√°rio
 	scanf("%s",nome); //%s refere-se a string
 	
 	file = fopen(arquivo,"a"); //cria o arquivo e o "a" significa escrever
-	fprintf(file,nome); // salva o valor da vari·vel
+	fprintf(file,nome); // salva o valor da vari√°vel
 	fclose(file); //fecha o arquivo
 	
 	file = fopen(arquivo, "a"); //cria o arquivo e o "a" significa escrever
-	fprintf(file,","); // salva o valor da vari·vel
+	fprintf(file,","); // salva o valor da vari√°vel
 	fclose(file); //fecha o arquivo
 	
-	printf("Digite o sobrenome a ser cadastrado: "); //coletando informÁ„o do usu·rio
+	printf("Digite o sobrenome a ser cadastrado: "); //coletando inform√ß√£o do usu√°rio
 	scanf("%s",sobrenome); //%s refere-se a string
 	
 	file = fopen(arquivo, "a"); //cria o arquivo e o "a" significa escrever
-	fprintf(file,sobrenome); // salva o valor da vari·vel
+	fprintf(file,sobrenome); // salva o valor da vari√°vel
 	fclose(file); //fecha o arquivo
 	
 	file = fopen(arquivo, "a"); //cria o arquivo e o "a" significa escrever
-	fprintf(file,","); // salva o valor da vari·vel
+	fprintf(file,","); // salva o valor da vari√°vel
 	fclose(file); //fecha o arquivo
 	
-	printf("Digite o cargo a ser cadastrado: "); //coletando informÁ„o do usu·rio
+	printf("Digite o cargo a ser cadastrado: "); //coletando inform√ß√£o do usu√°rio
 	scanf("%s",cargo); //%s refere-se a string
 	
 	file = fopen(arquivo, "a"); //cria o arquivo e o "a" significa escrever
-	fprintf(file,cargo); // salva o valor da vari·vel
+	fprintf(file,cargo); // salva o valor da vari√°vel
 	fclose(file); //fecha o arquivo
 	
-	system("pause"); // Pausa a execuÁ„o do programa e espera que o usu·rio pressione qualquer tecla para continuar
+	system("pause"); // Pausa a execu√ß√£o do programa e espera que o usu√°rio pressione qualquer tecla para continuar
 	
 }
 
@@ -64,12 +64,12 @@ int consultar()
 {
 	setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 	
-	// inÌcio da criaÁ„o de vari·veis/string	
+	// in√≠cio da cria√ß√£o de vari√°veis/string	
 	char cpf[40];
 	char conteudo[100];
-	// final da criaÁ„o de vari·veis/string
+	// final da cria√ß√£o de vari√°veis/string
 	
-	printf("Digite o CPF a ser consultado: "); //coletando informaÁ„o do usu·rio
+	printf("Digite o CPF a ser consultado: "); //coletando informa√ß√£o do usu√°rio
 	scanf("%s",cpf); //%s refere-se a string
   	
 	FILE *file; //cria o arquivo
@@ -77,88 +77,94 @@ int consultar()
   	
 	if(file == NULL) //significa que houve um erro ao tentar abrir o arquivo
 {
-	printf("N„o foi possivel abrir o arquivo, n„o localizado!.\n");// Mensagem de erro se o arquivo n„o for encontrado
+	printf("N√£o foi possivel abrir o arquivo, n√£o localizado!.\n");// Mensagem de erro se o arquivo n√£o for encontrado
 }
 	
 	while(fgets(conteudo, 100, file) != NULL)
 {
-	printf("\n Essas s„o as informaÁıes do usu·rio: "); // Exibe uma mensagem no console informando que as informaÁıes do usu·rio ser„o exibidas a seguir
-	printf("%s", conteudo); // Imprime o conte˙do lido do arquivo no console
-	printf("\n\n"); // Adiciona duas novas linhas no console para espaÁamento visual
+	printf("\n Essas s√£o as informa√ß√µes do usu√°rio: "); // Exibe uma mensagem no console informando que as informa√ß√µes do usu√°rio ser√£o exibidas a seguir
+	printf("%s", conteudo); // Imprime o conte√∫do lido do arquivo no console
+	printf("\n\n"); // Adiciona duas novas linhas no console para espa√ßamento visual
 }
   	
-	system ("pause"); // Pausa a execuÁ„o do programa e espera que o usu·rio pressione qualquer tecla para continuar
+	system ("pause"); // Pausa a execu√ß√£o do programa e espera que o usu√°rio pressione qualquer tecla para continuar
 	
 	
 }
 
 int deletar()
 {
-	// inÌcio da criaÁ„o de vari·veis/string
+	// in√≠cio da cria√ß√£o de vari√°veis/string
 	char cpf[40];
-	// final da criaÁ„o de vari·veis/string
+	// final da cria√ß√£o de vari√°veis/string
 	
-	printf("Digite o CPF do usu·rio a ser deletado: "); //coletando informaÁ„o do usu·rio
+	printf("Digite o CPF do usu√°rio a ser deletado: "); //coletando informa√ß√£o do usu√°rio
 	scanf("%s",cpf); //%s refere-se a string
 	
-	remove(cpf); // Remove o arquivo cujo nome È armazenado na vari·vel 'cpf'
+	remove(cpf); // Remove o arquivo cujo nome √© armazenado na vari√°vel 'cpf'
 	
 	FILE *file; // Declara um ponteiro 'file' do tipo 'FILE' para manipular o arquivo
-	file = fopen(cpf, "r"); // Abre o arquivo cujo nome È armazenado na vari·vel 'cpf' para leitura
+	file = fopen(cpf, "r"); // Abre o arquivo cujo nome √© armazenado na vari√°vel 'cpf' para leitura
 	
-	if(file == NULL); // Verifica se o arquivo n„o pÙde ser aberto
+	if(file == NULL); // Verifica se o arquivo n√£o p√¥de ser aberto
 	
 	{
-		printf("O usu·rio n„o se encontra no sistema! \n"); // Exibe uma mensagem no console informando que o usu·rio n„o foi encontrado no sistema
-		system ("pause"); // Pausa a execuÁ„o do programa e espera que o usu·rio pressione qualquer tecla para continuar
+		printf("O usu√°rio n√£o se encontra no sistema! \n"); // Exibe uma mensagem no console informando que o usu√°rio n√£o foi encontrado no sistema
+		system ("pause"); // Pausa a execu√ß√£o do programa e espera que o usu√°rio pressione qualquer tecla para continuar
 		
 	}
 	
 }
 
-int main()  // FunÁ„o principal do programa onde a execuÁ„o comeÁa
+int main()  // Fun√ß√£o principal do programa onde a execu√ß√£o come√ßa
 {
-	int opcao=0; // Definindo vari·veis
-	int x=1; // Declara uma vari·vel inteira 'x' e a inicializa com o valor 1
+	int opcao=0; // Definindo vari√°veis
+	int x=1; // Declara uma vari√°vel inteira 'x' e a inicializa com o valor 1
 	
-	for(x=1;x=1;) // Inicia um loop infinito, pois a condiÁ„o 'x == 1' sempre È verdadeira
+	for(x=1;x=1;) // Inicia um loop infinito, pois a condi√ß√£o 'x == 1' sempre √© verdadeira
 	
 	{
 	
-		system("cls"); // Limpa a tela do console para que o prÛximo conjunto de informaÁıes possa ser exibido sem interferÍncia
+		system("cls"); // Limpa a tela do console para que o pr√≥ximo conjunto de informa√ß√µes possa ser exibido sem interfer√™ncia
 		
 		setlocale(LC_ALL, "Portuguese"); // Definindo linguagem
 	
-			printf("### CartÛrio Lucy Cordeiro de Campos ### \n\n"); // InÌcio do menu
-			printf("Escolha a opÁ„o desejada do menu: \n\n");
+			printf("### Cart√≥rio Lucy Cordeiro de Campos ### \n\n"); // In√≠cio do menu
+			printf("Escolha a op√ß√£o desejada do menu: \n\n");
 			printf("\t1 - Registrar nomes\n");
 			printf("\t2 - Consultar nomes\n");
 			printf("\t3 - Deletar nomes\n\n"); 
-			printf("OpÁ„o: "); // Fim do menu
+		        printf("\t4 - Sair do sistema\n\n"); 
+			printf("Op√ß√£o: "); // Fim do menu
 	
-		scanf("%d", &opcao); // armazenando as escolhas do usu·rio
+		scanf("%d", &opcao); // armazenando as escolhas do usu√°rio
 	
-		system("cls"); // Limpa a tela do console para que o prÛximo conjunto de informaÁıes possa ser exibido sem interferÍncia
+		system("cls"); // Limpa a tela do console para que o pr√≥ximo conjunto de informa√ß√µes possa ser exibido sem interfer√™ncia
 		
-		switch(opcao) //inÌcio da seleÁ„o do menu
+		switch(opcao) //in√≠cio da sele√ß√£o do menu
 		{
-			case 1: // Executa a funÁ„o 'registro()' se a opÁ„o escolhida for 1
-			registro(); // chamada de funÁıes
-			break; ; // Sai do bloco 'switch' apÛs executar a funÁ„o 'registro()'
+			case 1: // Executa a fun√ß√£o 'registro()' se a op√ß√£o escolhida for 1
+			registro(); // chamada de fun√ß√µes
+			break; ; // Sai do bloco 'switch' ap√≥s executar a fun√ß√£o 'registro()'
 			
-			case 2: // Executa a funÁ„o 'registro()' se a opÁ„o escolhida for 2
-			consultar(); // chamada de funÁıes
-			break; // Sai do bloco 'switch' apÛs executar a funÁ„o 'registro()'
+			case 2: // Executa a fun√ß√£o 'registro()' se a op√ß√£o escolhida for 2
+			consultar(); // chamada de fun√ß√µes
+			break; // Sai do bloco 'switch' ap√≥s executar a fun√ß√£o 'registro()'
 			
-			case 3: // Executa a funÁ„o 'registro()' se a opÁ„o escolhida for 3
-			deletar(); // chamada de funÁıes
-			break;// Sai do bloco 'switch' apÛs executar a funÁ„o 'registro()'
+			case 3: // Executa a fun√ß√£o 'registro()' se a op√ß√£o escolhida for 3
+			deletar(); // chamada de fun√ß√µes
+			break;// Sai do bloco 'switch' ap√≥s executar a fun√ß√£o 'registro()'
+
+			case 4:
+			printf("Obrigado por utilizar o sistema!\n");
+			return 0;
+			break;
 			
-			default: // Exibe mensagem de opÁ„o inv·lida
-			printf("OpÁ„o inv·lida!\n"); // Exibe uma mensagem no console informando que a opÁ„o escolhida È inv·lida
-			system("pause"); // Pausa a execuÁ„o do programa e espera que o usu·rio pressione qualquer tecla para continuar
-			break; // Sai do bloco 'switch' apÛs executar a funÁ„o 'registro()'
-			//fim da seleÁ„o	
+			default: // Exibe mensagem de op√ß√£o inv√°lida
+			printf("Op√ß√£o inv√°lida!\n"); // Exibe uma mensagem no console informando que a op√ß√£o escolhida √© inv√°lida
+			system("pause"); // Pausa a execu√ß√£o do programa e espera que o usu√°rio pressione qualquer tecla para continuar
+			break; // Sai do bloco 'switch' ap√≥s executar a fun√ß√£o 'registro()'
+			//fim da sele√ß√£o	
 			
 		}
 	

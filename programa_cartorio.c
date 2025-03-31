@@ -120,6 +120,11 @@ int main()  // Função principal do programa onde a execução começa
 {
 	int opcao=0; // Definindo variáveis
 	int x=1; // Declara uma variável inteira 'x' e a inicializa com o valor 1
+	char senhadigitada[10]"a";
+	
+	printf("### Cartório Lucy Cordeiro de Campos ### \n\n");
+	pruntf("Login de administrador!//Digite sua senha: ");
+	scanf("%s", senhadigitada);
 	
 	for(x=1;x=1;) // Inicia um loop infinito, pois a condição 'x == 1' sempre é verdadeira
 	

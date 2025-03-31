@@ -125,14 +125,17 @@ int main()  // Função principal do programa onde a execução começa
 	printf("### Cartório Lucy Cordeiro de Campos ### \n\n");
 	printf("Login de administrador!//Digite sua senha: ");
 	scanf("%s",senhadigitada);
+
+		if(senhadigitada[10]) = "admin");
+		{
 	
-	for(x=1;x=1;) // Inicia um loop infinito, pois a condição 'x == 1' sempre é verdadeira
+		for(x=1;x=1;) // Inicia um loop infinito, pois a condição 'x == 1' sempre é verdadeira
 	
-	{
+			{
 	
-		system("cls"); // Limpa a tela do console para que o próximo conjunto de informações possa ser exibido sem interferência
+			system("cls"); // Limpa a tela do console para que o próximo conjunto de informações possa ser exibido sem interferência
 		
-		setlocale(LC_ALL, "Portuguese"); // Definindo linguagem
+			setlocale(LC_ALL, "Portuguese"); // Definindo linguagem
 	
 			printf("### Cartório Lucy Cordeiro de Campos ### \n\n"); // Início do menu
 			printf("Escolha a opção desejada do menu: \n\n");
@@ -142,12 +145,12 @@ int main()  // Função principal do programa onde a execução começa
 		        printf("\t4 - Sair do sistema\n\n"); 
 			printf("Opção: "); // Fim do menu
 	
-		scanf("%d", &opcao); // armazenando as escolhas do usuário
+			scanf("%d", &opcao); // armazenando as escolhas do usuário
 	
-		system("cls"); // Limpa a tela do console para que o próximo conjunto de informações possa ser exibido sem interferência
+			system("cls"); // Limpa a tela do console para que o próximo conjunto de informações possa ser exibido sem interferência
 		
-		switch(opcao) //início da seleção do menu
-		{
+			switch(opcao) //início da seleção do menu
+			{
 			case 1: // Executa a função 'registro()' se a opção escolhida for 1
 			registro(); // chamada de funções
 			break; ; // Sai do bloco 'switch' após executar a função 'registro()'
@@ -171,9 +174,9 @@ int main()  // Função principal do programa onde a execução começa
 			break; // Sai do bloco 'switch' após executar a função 'registro()'
 			//fim da seleção	
 			
+			}
 		}
-	
-		
-	
 	}
+	else
+		printf("senha incorreta!");
 }

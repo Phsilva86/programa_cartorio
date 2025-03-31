@@ -126,7 +126,7 @@ int main()  // Função principal do programa onde a execução começa
 	printf("Login de administrador!//Digite sua senha: ");
 	scanf("%s",senhadigitada);
 
-		if(senhadigitada[10] = "admin")
+		if(senhadigitada[10] == "admin")
 		{
 	
 		for(x=1;x=1;) // Inicia um loop infinito, pois a condição 'x == 1' sempre é verdadeira
